@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blip React Components
 
-## Available Scripts
+This repo is a wrapper of a blip-tookit.
 
-In the project directory, you can run:
+## Components Avaible
 
-### `yarn start`
+### BlipCard
+The blipcard is a card used to show a bots information in a platform
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Usage
+In the case bellow the image is setting with a url
 
-### `yarn test`
+` <BlipCard
+        title="Some Title"
+        image="https://cdn3.iconfinder.com/data/icons/web-and-seo-11-1/65/549-512.png"
+        smallTitle="Some small"
+      />`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![alt](https://i.imgur.com/qjoPr8X.png)
 
-### `yarn build`
+You can set a image using a SVG file, see bellow:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`
+import Avatar from "./images/avatar.svg";
+<BlipCard title="Avatar" image={Avatar} smallTitle="With svg file" />
+`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![alt](https://i.imgur.com/PkpknRL.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Attribute      |                   Description                    |      Type       | Required |
+| :------------- | :----------------------------------------------: | :-------------: | -------: |
+| **title**      |                    Card Title                    |     string      |    false |
+| **image**      | The avatar image, may be the url or the Svg File | string/SVG file |    false |
+| **samllTitle** |                The card Subtitle                 |     string      |    false |
 
-### `yarn eject`
+If you using more than one card you can agroup them in a container, to use this container is simple see the code bellow:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`
+<BlipCardContainer>
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+  <BlipCard title="Some Title" smallTitle="Some small" />
+</BlipCardContainer>
+`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![alt](https://i.imgur.com/JLc6p9m.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Blip Input
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This component still in development so the features are not finished
 
-## Learn More
+#### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`<BlipInputReact />`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![alt](https://i.imgur.com/6XtBTeO.png)
 
-### Code Splitting
+### Blip Loading
+This is just a load, there is no reason to be complex
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Usage
 
-### Analyzing the Bundle Size
+`<BlipLoading />`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![alt](https://i.imgur.com/bc1iEPb.png)
 
-### Making a Progressive Web App
+### Blip Header
+Using to be title `<h1>` of Blip
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Usage
 
-### Advanced Configuration
+`<PageHeader>Some text in Header</PageHeader>`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![alt](https://i.imgur.com/I2Rm3U8.png)
