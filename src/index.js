@@ -5,7 +5,7 @@
 // ReactDOM.render(<App />, document.getElementById("root"));
 
 import { BlipCard, BlipCardContainer } from "./components/BlipCard";
-import { BlipInputReact } from "./components/BlipInput";
+import BlipInputReact from "./components/BlipInput";
 import { BlipLoading } from "./components/BlipLoading";
 import { BlipPageHeader } from "./components/PageHeader";
 
