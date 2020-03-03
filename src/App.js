@@ -16,7 +16,7 @@ function App() {
         smallTitle="Some small"
       />
       <h3>Using a image with a SVG</h3>
-      <BlipCard title="Some Title" image={Avatar} smallTitle="Some small" />
+      <BlipCard title="Avatar" image={Avatar} smallTitle="With svg file" />
       <h3>Using a default image</h3>
       <BlipCard title="Some Title" smallTitle="Some small" />
       <h2>Lot of Cards</h2>
@@ -38,6 +38,7 @@ function App() {
       <BlipLoading />
       <h2>Header</h2>
       <PageHeader>Some text in Header</PageHeader>
+      some text to complete the blank space
     </>
   );
 }
