@@ -5,7 +5,7 @@ import BlipIcon from "../../components/BlipIcon";
 
 export function BlipCard({ title, smallTitle, image }) {
   return (
-    <>
+    <React.Fragment>
       <Container>
         <BlipIcon image={image} />
         <div>
@@ -15,7 +15,7 @@ export function BlipCard({ title, smallTitle, image }) {
           <small>{smallTitle}</small>
         </div>
       </Container>
-    </>
+    </React.Fragment>
   );
 }
 
